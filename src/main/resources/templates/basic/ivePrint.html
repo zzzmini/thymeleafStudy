@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-  <h1>아이브 정보 출력</h1>
-  <ul>
-    <li>이름 : 머시기</li>
-    <li>나이 : 모름</li>
-  </ul>
+<h1>아이브 정보 출력</h1>
+<ul>
+    <li>이름 : [[${name}]]</li>
+    <li>나이 : [[${age}]]</li>
+    <li th:text="${data}">여기는 li 태그자리</li>
+    <li th:utext="${data}">여기는 li 태그자리</li>
+</ul>
 </body>
 </html>
