@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-
+    <h1>SpringEL 표현식</h1>
+    <h2>Spring EL : Spring Expression Language</h2>
+    <ul> Member Object
+        <li>멤버 이름 : <span th:text="${member.memberName}">장원영</span></li>
+        <li>나이 : [[${member.age}]]</li>
+        <li>주소 : <span th:text="${member.getAddress}"></span></li>
+    </ul>
+    <ul>List 출력하기
+        <li>첫번째 리스트 이름 : <span th:text="${list[0].memberName}"></span></li>
+        <li>첫번째 리스트 나이 : [[${list[0].age}]]</li>
+        <li>첫번째 리스트 주소 : <span th:text="${list[0].getAddress}"></span></li>
+    </ul>
+    <ul>Map 출력하기
+        <li>첫번째 맵 자료의 이름 :
+            <span th:text="${map['h'].memberName}"></span></li>
+        <li>두번째 맵 자료의 이름 : [[${map['p']['memberName']}]]</li>
+    </ul>
 </body>
 </html>
