@@ -11,4 +11,9 @@ public class MainController {
     public String mainPage() {
         return "mainPage";
     }
+
+    @GetMapping("/link")
+    public String linkPage() {
+        return "/link/link_test";
+    }
 }
