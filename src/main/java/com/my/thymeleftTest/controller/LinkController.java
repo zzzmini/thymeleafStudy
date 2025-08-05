@@ -1,0 +1,28 @@
+package com.my.thymeleftTest.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class LinkController {
+    @GetMapping("/hello")
+    public String hello() {
+        return "/link/hello_result";
+    }
+
+    @GetMapping("/query")
+    //  localhost:8080/query?name=장원영&age=21
+    public String query(
+            @RequestParam("name")String name,
+            @RequestParam("age")int age,
+            Model model) {
+        System.out.println("name : " + name);
+        System.out.println("age : " + age);
+        model.addAttribute("info",
+                name + " " + age);
+        return "/link/query_result";
+    }
+}

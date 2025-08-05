@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-  link-test
+  <h1>URL 링크</h1>
+  <ul> 기본 URL 링크
+    <li><a th:href="@{hello}">Basic URL</a></li>
+  </ul>
+  <ul> 장원영 정보 출력
+    <li>이름 : [[${jang.memberName}]]</li>
+    <li>나이 : [[${jang.age}]]</li>
+    <li>주소 : [[${jang.address}]]</li>
+  </ul>
+  <ul>쿼리 파라미터(Request Param)
+  <!-- localhost:8080/query?name=장원영&age=21  -->
+    <li><a th:href="@{|/query?name=장원영&age=21|}">쿼리 파라미터 테스트</a></li>
+  </ul>
 </body>
 </html>
