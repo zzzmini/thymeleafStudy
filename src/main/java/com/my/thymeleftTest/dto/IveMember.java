@@ -2,10 +2,10 @@ package com.my.thymeleftTest.dto;
 
 import lombok.*;
 
-//@Getter
-//@Setter
-//@ToString
-@Data
+@Getter
+@Setter
+@ToString
+//@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class IveMember {

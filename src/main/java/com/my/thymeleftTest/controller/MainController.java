@@ -17,7 +17,7 @@ public class MainController {
     @GetMapping("/link")
     public String linkPage(Model model) {
         IveMember member = new
-                IveMember("장원영", 20, "서울");
+                IveMember("장원영", 21, "서울");
         model.addAttribute("jang", member);
         return "/link/link_test";
     }

@@ -25,9 +25,9 @@ public class ThymeleafController {
     @GetMapping("/variable")
     public String variable(Model model) {
         IveMember member = new IveMember();
-        member.setMemberName("안유진");
-        member.setAge(22);
-        member.setAddress("서울");
+//        member.setMemberName("안유진");
+//        member.setAge(22);
+//        member.setAddress("서울");
         System.out.println(member);
         model.addAttribute("member", member);
 
