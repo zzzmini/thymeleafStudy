@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>제품정보 출력</h1>
+<table border="1">
+    <tr>
+        <th>제품명</th>
+        <th>가격</th>
+        <th>재고</th>
+    </tr>
+    <tr>
+        <td>[[${products[0].name}]]</td>
+        <td>[[${products[0].price}]]원</td>
+        <td>[[${products[0].stock}]]개</td>
+    </tr>
+    <tr>
+        <td th:text="${products[1].name}"> </td>
+        <td th:text="${products[1].price}"></td>
+        <td th:text="${products[1].stock}"></td>
+    </tr>
+</table>
+</body>
+</html>

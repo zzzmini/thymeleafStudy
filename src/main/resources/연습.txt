@@ -1,0 +1,25 @@
+1. dto : Product 클래스 생성
+name / price / stock
+
+2. ProductController 생성
+/product/info
+
+Product 리스트를 생성 후
+ⓐ 콜라, 1000, 10
+ⓑ 사이다, 1200, 7
+
+model 로 전송
+
+3. product/product_info.html
+출력내용 :
+
+상품정보
+상품명 : 콜라
+가격 : 1000원
+재고 : 10개
+---------------------------   (hr)
+상품명 : 사이다
+가격 : 1200원
+재고 : 7개
+
+
