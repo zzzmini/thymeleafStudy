@@ -25,6 +25,7 @@ public class ProductController {
 
         // 리스트에 담는다.
         List<Product> products = new ArrayList<>();
+
         products.add(cola);
         products.add(cyder);
         model.addAttribute("products", products);
