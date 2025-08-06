@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>IVE Member</h1>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+    </tr>
+    <tr th:each="member : ${ive}">
+      <td>짱워녕</td>
+      <td>2111</td>
+      <td>서우르</td>
+    </tr>
+  </table>
+</body>
+</html>

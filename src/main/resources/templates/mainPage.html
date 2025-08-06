@@ -5,9 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+    <h3>반복문 : Each 구문</h3>
+    <ul>
+        <li><a th:href="@{/each}">Each 반복문 테스트</a></li>
+    </ul>
+    <hr>
     <h3>경로변수 + 쿼리파라미터 테스트</h3>
     <ul>
         <li><a th:href="@{/link}">테스트 페이지</a></li>
+    </ul>
+    <hr>
+    <h3>연산자</h3>
+    <ul> 비교연산
+        <li>1 == 2 : <span th:text="1 == 2"></span></li>
+        <li>1 != 2 : <span th:text="1 != 2"></span></li>
+        <li>1 >= 2 : <span th:text="1 >= 2"></span></li>
+    </ul>
+    <ul> 삼항연산
+        <li> 10 % 2 :
+            <span th:text="(10 % 2 == 0)?'짝수':'홀수'"></span></li>
     </ul>
     <hr>
     <h1>반갑습니다.</h1>

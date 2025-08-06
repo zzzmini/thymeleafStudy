@@ -45,4 +45,14 @@ public class LinkController {
                 name + " " + age);
         return "/link/query_result";
     }
+
+    //http://localhost:8080/장원영?address=서울
+    @GetMapping("/{id}")
+    public String queryAndPath(Model model,
+               @PathVariable("id")String name,
+               @RequestParam("address")String address) {
+        model.addAttribute("info",
+                name + " " + address);
+        return "/link/query_result";
+    }
 }

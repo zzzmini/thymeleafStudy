@@ -30,5 +30,27 @@
     <li><a th:href="@{|/path/${jang.memberName}/${jang.age}|}">
       PathVariable 테스트</a></li>
   </ul>
+  <ul>쿼리 파라미터 + 경로변수 테스트
+  <!-- 이름은 경로변수에 넣고, 주소는 쿼리 스트링으로 보내기 -->
+    <li><a
+          th:href="@{|/${jang.memberName}?address=${jang.address}|}"
+    >쿼리 파라미터 + 경로변수 테스트</a></li>
+  </ul>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
