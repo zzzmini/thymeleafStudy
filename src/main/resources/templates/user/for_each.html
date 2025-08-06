@@ -13,9 +13,57 @@
       <th>Address</th>
     </tr>
     <tr th:each="member : ${ive}">
-      <td>짱워녕</td>
-      <td>2111</td>
-      <td>서우르</td>
+      <td th:text="${member.memberName}">짱워녕</td>
+      <td>[[${member.age}]]</td>
+      <td th:text="${member.address}">서우르</td>
+    </tr>
+  </table>
+  <hr>
+  <h1>구구단 3단 출력</h1>
+  <ul>
+    <li th:each="i : ${#numbers.sequence(1, 9)}">
+      <span th:text="|3 × ${i} = ${i * 3}|"></span>
+    </li>
+  </ul>
+  <hr>
+  <h1>여러가지 Each 구문 사용법</h1>
+  <table border="1">
+    <tr>
+      <th>Index</th>
+      <th>Count</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Others</th>
+    </tr>
+    <tr th:each="member, i : ${ive}" th:object="${member}">
+      <td>[[${i.index}]]</td>
+      <td>[[${i.count}]]</td>
+      <td>[[*{memberName}]]</td>
+      <td th:text="*{address}"></td>
+      <td>
+        size = <span>[[${i.size}]]</span>
+        even = <span>[[${i.even}]]</span>
+        odd = <span>[[${i.odd}]]</span>
+        first = <span>[[${i.first}]]</span>
+        last = <span>[[${i.last}]]</span>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <h1>If 와 Unless</h1>
+  <table border="1">
+    <tr>
+      <th>이름</th>
+      <th>나이</th>
+      <th>구분</th>
+    </tr>
+    <tr th:each="x : ${ive}" th:object="${x}">
+      <td th:text="*{memberName}"></td>
+      <td th:text="*{age}"></td>
+      <td>
+        <span th:text="10대" th:if="*{age} < 20"></span>
+        <span th:text="20대" th:unless="*{age} < 20"></span>
+      </td>
     </tr>
   </table>
 </body>
